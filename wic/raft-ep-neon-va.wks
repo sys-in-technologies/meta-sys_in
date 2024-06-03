@@ -1,0 +1,5 @@
+# create a partitioned SD card image for Raft-EP-neon-VA (T113s3) board.
+
+include t113s-boot.wks
+
+part / --source rootfs --ondisk mmcblk1 --fstype=ext4 --label root --align 4 --use-uuid
