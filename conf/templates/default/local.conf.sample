@@ -85,7 +85,7 @@ SSTATE_DIR ?= "${TOPDIR}/../sstate-cache"
 # Ultimately when creating custom policy, people will likely end up subclassing 
 # these defaults.
 #
-DISTRO ?= "RAFT-EP"
+DISTRO ?= "raft-ep"
 # As an example of a subclass there is a "bleeding" edge policy configuration
 # where many versions are set to the absolute latest code from the upstream 
 # source control systems. This is just mentioned here as an example, its not
@@ -268,9 +268,8 @@ BB_DISKMON_DIRS ??= "\
 CONF_VERSION = "1"
 INHERIT += "rm_work image-buildinfo"
 BB_GENERATE_MIRROR_TARBALLS = "1"
-#PACKAGE_FEED_URIS = "http://192.168.17.63:80"
 EXTRA_IMAGE_FEATURES += " package-management "
-IMAGE_ROOTFS_EXTRA_SPACE = "102400"
+IMAGE_ROOTFS_EXTRA_SPACE = "131072"
 
 SANITY_LOCALCONF_SAMPLE = "${COREBASE}/meta-sys_in/conf/templates/default/local.conf.sample"
 
