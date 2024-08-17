@@ -1,0 +1,8 @@
+# create a partitioned SD card image for Raft-EP-neon-VA (T113s3) board.
+
+include t113s-boot.wks
+
+# This is a hack to let wic use a existing rootfs and setup the permission properly.
+# rootfs.py will take care the permission of existing 3rd party files if they are in the --include-path.
+
+part / --source rootfs --rootfs-dir=../downloads/ubuntu-20.04-rootfs/pseudo/empty --include-path=../downloads/ubuntu-20.04-rootfs/pseudo/rootfs --exclude-path=tmp/ --ondisk mmcblk0 --fstype=ext4 --label root --align 4 --use-uuid

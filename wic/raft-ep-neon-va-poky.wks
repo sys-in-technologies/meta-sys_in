@@ -2,4 +2,4 @@
 
 include t113s-boot.wks
 
-part / --source rootfs --ondisk mmcblk1 --fstype=ext4 --label root --align 4 --use-uuid
+part / --source rootfs --ondisk mmcblk0 --fstype=ext4 --label root --align 4 --use-uuid
