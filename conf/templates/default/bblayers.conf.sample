@@ -11,5 +11,7 @@ BBLAYERS ?= " \
   ##OEROOT##/../poky/meta-yocto-bsp \
   ##OEROOT##/../poky/meta-arm/meta-arm-toolchain \
   ##OEROOT##/../poky/meta-openembedded/meta-oe \
+  ##OEROOT##/../poky/meta-openembedded/meta-networking \
+  ##OEROOT##/../poky/meta-openembedded/meta-python \
   ##OEROOT##/../poky/meta-sys_in \
 "
